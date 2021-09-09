@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            /*let quadrado = function(x = 5){ 
+                return x * x
+            }*/
+
+            let quadrado = (x) => {  //aplicando o exemplo acima utilizando arrow function
+                return x * x
+            }
+
+            let quadrado = x => {  //caso um único parametro esteja sendo passado, não preciso utilizar parenteses. Caso nenhum parametro seja passado, é preciso escrever os parenteses: "()"
+                return x * x
+            }
+
+            let quadrado = x => x * x //como temos uma única instrução sendo realizada na função, podemos escrever sem chaves e o "return" não é necessário (return implícito)"
+
+            document.write(quadrado(3))
+
+            //--------------------------------------------------------
+
+            /*let parOuImpar = function(numero){
+
+                if(numero % 2 === 0){
+                    return 'par'
+                }else{
+                    return 'impar'
+                }
+
+            }*/
+
+            /*let parOuImpar = numero => {
+
+                if(numero % 2 === 0){
+                    return 'par'
+                }else{
+                    return 'impar'
+                }
+
+            }*/
+
+            let parOuImpar = numero => numero % 2 === 0 ? 'par': 'impar' //return implícito, utilizando operador ternário no lugar do if, para deixar o código menos verboso
+
+
+            document.write(parOuImpar(7))
+
+        </script>    
+    </head>
+    <body>
+
+    </body>
+</html>

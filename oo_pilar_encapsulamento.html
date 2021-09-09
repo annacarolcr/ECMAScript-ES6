@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            class Tv {
+                constructor(relacaoCanais){
+                    this._relacaoCanais = Array(2, 4, 6, 7, 10) //para criar um atributo que é restrito apenas a esse objeto, é necessário escrever um "_" na frente do nome do atributo. É uma convenção criada para resolver o problema do JavaScript não suportar operadores de visibilidade (private, public, etc)
+                    this._canalAtivo = 5
+                    this._volume = 5
+                }
+
+                //getters e setters
+                get canalAtivo(){
+                    return this._canalAtivo
+                }
+
+                set canalAtivo(canal) {
+                    if(this._relacaoCanais.indexOf(canal) !== -1) {
+                        this._canalAtivo = canal
+                    }
+                    
+                }
+            }
+
+            let tv = new Tv()
+
+            tv.canalAtivo = 7
+            console.log(tv.canalAtivo)
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
