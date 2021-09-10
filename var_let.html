@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            //3 escopos: global, função e bloco
+
+            //escopo global
+            var serie = "Friends" //estará disponível em todos os escopos
+
+            //escopo função
+            function x(){
+                
+                var serie = "GOT" //estará disponível para a função e para os blocos contidos na função
+
+                if(true){
+                var serie = "HIMYM" //estará disponível para o bloco e a função em que o bloco está inserido
+                }
+                
+            }
+
+            //escopo bloco
+            if(true){
+                var serie = "Modern Family" //estará disponível para todos os escopos   
+            }
+
+            x()
+
+            if(true){
+                let serie = "Modern Love" //o escopo da variável é preservado, ficando disponível apenas para o escopo em que a variável se encontra
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
