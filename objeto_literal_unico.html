@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+        /*todo objeto literal é um objeto unico dentro da aplicacao e quando esse objeto é atribuido
+        a outras variáveis, não estaremos fazendo a atribuicao do objeto propriamente dito, mas sim
+        a atribuicao da referencia, fazendo com que variaveis diferentes apontem para o mesmo lugar,
+        conforme o exemplo abaixo:*/
+        
+            let assinatura = {
+                idCliente: 1000,
+                descricao: 'Acesso a internet',
+                status() {
+                    console.log('Ativo')
+                }
+            }
+
+            console.log(assinatura.descricao)
+
+            let y = assinatura
+            console.log(y.descricao)
+
+            //
+            y.descricao = 'Internet + TV + Telefone'
+
+            console.log(assinatura.descricao)
+            console.log(y.descricao)
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
