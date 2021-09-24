@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+
+            //objeto literal
+            let aviao1 = {
+                cor: 'Branco',
+                modelo: 'Airbus a380',
+                levantarVoo: function() {console.log('levantar voo')}
+            }
+
+            //função construtora
+            let AviaoF = function() {
+                this.cor = 'Verde'
+                this.modelo = 'Boeing 787'
+                this.levantarVoo = function() {console.log('levantar voo')}
+            }
+
+            let aviao2 = new AviaoF()
+
+            //Classe
+            class AviaoC{
+                constructor(){
+                    this.cor = 'azul'
+                    this.modelo = 'Embraer E-Jets'
+                }
+                levantarVoo() {
+                    console.log('levantar voo')
+                }
+            }
+            let aviao3 = new AviaoC()
+
+            console.log(aviao1)
+            console.log(aviao2)
+            console.log(aviao3)
+            
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

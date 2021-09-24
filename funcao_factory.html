@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            //---------- Objeto literal sendo criado em modo hard code -----------------
+            let Bicicleta1 = {
+                cor: 'branca',
+                marcha: 'única',
+                aro: 12,
+                pedalar() {console.log('Método pedalar executado')}
+            }
+
+            console.log(Bicicleta1)
+
+            //---------- Objetos literais sendo criados por meio de uma função factory -----------------
+            
+            let BicicletaFactory = function(cor, marcha, aro){
+                //lógica
+                //requisição http
+                //resposta http
+                return {
+                    cor,
+                    marcha,
+                    aro,
+                    pedalar() {console.log('Método pedalar executado')}
+                }
+            }
+
+            let Bicicleta2 = BicicletaFactory('Vermelho', '18', 26)
+            console.log(Bicicleta3)
+
+            let Bicicleta3 = BicicletaFactory('preto', '21', 29)
+            console.log(Bicicleta3)
+            
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

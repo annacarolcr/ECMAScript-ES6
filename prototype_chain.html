@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+
+            Object.prototype.atributo50 = 'z' //cuidado, dessa forma se cria um método global para a aplicação.
+
+            let animal = {
+                atributo1: 'a'
+            }
+
+            let vertebrado = {
+                __proto__: animal, atributo2: 'b'
+            }
+
+            let ave = {
+                __proto__: vertebrado, atributo3: 'c', atributo2: 'x' //aqui acontecerá uma sobreposição no valor de atributo2, passará a ser x
+            }
+
+            console.log(ave.atributo1, ave.atributo2, ave.atributo3, ave.atributo50)
+            
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
