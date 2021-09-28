@@ -7,6 +7,8 @@
             /*destructuring é um operador de desestruturação. Tira valores de dentro de uma estrutura.
             Que pode ser um array ou um objeto.*/
 
+            //------------ Contexto de arrays -------------
+
             //let frutas = ['abacaxi', 'uva', 'pera', 'mamao']
 
             //let a = frutas[0]
@@ -42,6 +44,72 @@
 
             console.log(p)
 
+            //------------- Contexto de Objetos --------------
+
+            let produto = {
+                descricao: 'Notebook',
+                preco: 1800,
+                detalhes: {
+                    fabricante: 'abc',
+                    modelo: 'xyz'
+                }
+            }
+            let {descricao: d, preco: p, desconto = 5} = produto //para desestruturar objetos o token é '{}'
+                                            //token: arrays '[]', objetos '{}'
+                                            //podemos definir valores default p variaveis que não existem. Desconto.
+            
+            console.log(d, p, desconto)
+
+            //para desestruturar objetos dentro de objetos:
+            let {detalhes: {fabricante: f, modelo = 'Não informado'}} = produto
+            console.log(f, modelo)
+
+            // ----------- Contexto de Funções ---------------
+
+            //array
+            let arr = [10, 20, 30, 40]
+
+            function teste([a, b, , c, d = 100]){
+                console.log(a, b, c, d)
+            }
+
+            teste(arr)
+
+            //objetos
+
+            let obj = {
+                a: 10,
+                b: 20,
+                c: 30,
+                d: 40
+            }
+
+            function teste({a: x, b, c, e = 100}){
+                console.log(x, b, c, e)
+            }
+            teste(obj)
+
+            //---------- Destructuring em conjunto com o operador rest -----------
+
+            //array
+
+            let arr = [10, 20, 30, 40]
+
+            let [primeiraPosicao, ...resto] = arr
+
+            console.log(a)
+            console.log(resto)
+             
+            //objeto
+
+            let obj = {
+                a: 10, b: 20, c: 30, d: 40
+            }
+
+            let {a, ...z} = obj
+
+            console.log(a)
+            console.log(z)
         </script>
     </head>
     <body>
