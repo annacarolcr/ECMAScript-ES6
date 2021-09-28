@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            /*destructuring é um operador de desestruturação. Tira valores de dentro de uma estrutura.
+            Que pode ser um array ou um objeto.*/
+
+            //let frutas = ['abacaxi', 'uva', 'pera', 'mamao']
+
+            //let a = frutas[0]
+
+            //console.log(a)
+
+            /*para extrair um unico valor, esse procedimento é usual, mas se precisarmos extrair 
+            mais valores? Podemos utilizar o destructuring, como vemos a seguir:*/
+
+            let frutas = ['abacaxi', 'uva', 'pera', 'mamao']
+
+            //let [a, b, , c] = frutas /*primeiro, precisamos indicar qual é o operador que queremos utilizar (let ou const).
+                            //Na sequencia, no caso do array, utilizamos '[]'. Portanto o token da feature 
+                            //destructuring é igual ao token do array. Depois indicamos qual array o 
+                            //qual iremos extrair as informações.*/
+
+            //console.log(a, b, c)
+
+            //let [a, b, c, d, e = 'banana'] = frutas //podemos atribuir valores default a posições que não existem no array.
+
+            //console.log(a, b, c, d, e)
+
+            //--------- arrays multidimensionais ---------
+            let coisas = [['abacaxi', 'uva', 'pera', 'mamao'], ['José', 'Maria']]
+            //let [, [, z]] = coisas
+
+            //console.log(z)
+
+            //----------- Desafio ---------------
+            //retornar o valor pera
+
+            let [[, , p] ,] = coisas
+
+            console.log(p)
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
